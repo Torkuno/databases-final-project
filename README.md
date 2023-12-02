@@ -1,13 +1,83 @@
-<!--This is a comment in Markdown-->
-# Madrid Events - Database Final Project
+<!--------------------- Table of Contents ------------------->
+## Table Of Contents
+- [1. Django configurations](#1.-Django-configurations)
+    - [Setting up our Django Web-App](#Setting-up-our-Django-Web-App)
+    - [Configure Database Settings for the Django Web-App](#Configure-Database-Settings-for-the-Django-Web-App)
+        - [Configure Database Settings for MySQL database](#Configure-Database-Settings-for-MySQL-database)
+    - [Propagating Data Base Configurations and Runing the App](#Propagating-Data-Base-Configurations-and-Runing-the-App)
+- [2. Web-Scraping](#2.-Web-Scraping)
+    - [Prerequisites](#Prerequisites)
+    - [Explanation of scraping.py](#scraping-file)
+        - [Setting the target url](#Setting-the-target-url)
+        - [Making a request to the website](#Making-a-request-to-the-website)
+        - [Initializing an Empty List for Events](#Initializing-an-Empty-List-for-Events)
+        - [Checking the Request Status](#Checking-the-Request-Status)
+        - [Parsing HTML Content with BeautifulSoup](#Parsing-HTML-Content-with-BeautifulSoup)
+        - [Extracting Event Details](#Extracting-Event-Details)
+        - [Extracting Event Information](#Extracting-Event-Information)
+        - [Fidning the image](#Fidning-the-image)
+        - [Adding Event Details to the List](#Adding-Event-Details-to-the-List)
+        - [Saving Events to a JSON File](#Saving-Events-to-a-JSON-File)
+        - [Request Failure](#Request-Failure)
+- [3. Project Members](#3.-Project-Members)
 
+
+<!--------------------- Django Web-App  --------------------->
+# 1. Django configurations
+## Setting up our Django Web-App
+Creating **virtual environment** to isolates dependencies, ensuring compatibility and conflict-free development.
+```
+pip install virtualenv
+virtualenv venv
+venv\Scripts\activate
+```
+configuring **virtual environment** to hoset our Django Web-App.
+```
+pip install wheel
+pip install django
+pip install mysqlclient
+```
+Creating a new **Django** project.
+```
+django-admin startproject madridevents
+```
+
+## Configure Database Settings for the Django Web-App
+We decided to do the MySQL and Django migrations in separate Python files (MySQL in manage.py and MongoDB in manage_Mongo.py) this was done in order for us to integrate the MySQL Database seamlessly with Django's ORM(Object-Relational Mapping) and have more flexibility with the management and configuration of the MongoDB Database.
+
+### Configure Database Settings for MySQL database 
+
+[manage.py](https://github.com/Torkuno/databases-final-project/blob/main/manage.py)
+
+
+## Propagating Data Base Configurations and Runing the App
+Applying our database schema changes (manage.py) in order to synchronize the database with the current state of models and schemas.
+```
+python manage.py migrate
+```
+
+Createing a new application named 'madridevents' within our Django project
+```
+python manage.py startapp madridevents
+```
+
+Running the Django Web-App (http://127.0.0.1:8000/admin/)
+```
+python manage.py runserver
+```
+
+
+
+
+<!-------------------- WEB-Scraping ------------------------->
+# 2. Web-Scraping
 ## Prerequisites
 This project's execution requres **BeautifulSoup4** and **requests**. You can install them using
 ```
 pip install beautifulsoup4 requests
 ```
 
-## Explanation of [scraping.py](https://github.com/Torkuno/databases-final-project/blob/main/scraping.py)
+## Explanation of [scraping.py](https://github.com/Torkuno/databases-final-project/blob/main/scraping.py)<a name = "scraping file"></a>
 ### Setting the target url
 This line defines the target URL, which is the webpage containing the events that the script is looking for.
 ```
@@ -98,11 +168,11 @@ else:
 ```
 
 
-## Project Members
+# 3. Project Members
 All the collabroaors in this repositories are group members.
 
 - [Shahaf Brenner](https://github.com/shahafbr)
-- [Larbi Benamour](https://media.tenor.com/P92tU-wh11YAAAAd/spinning-fish.gif)
+- [Larbi Benamour](https://github.com/Larbibenamour)
 - [Juan Diego Fernandez](https://github.com/juandifers)
 - [Tomas Mesalles](https://github.com/Torkuno)
 - [Sergio Verdugo](https://github.com/Svrubio7)
