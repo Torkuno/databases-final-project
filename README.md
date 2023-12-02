@@ -47,7 +47,7 @@ We decided to do the MySQL and Django migrations in separate Python files (MySQL
 
 ### Configure Database Settings for MySQL database 
 
-[manage.py](https://github.com/Torkuno/databases-final-project/blob/main/manage.py)
+[settings.py](https://github.com/Torkuno/databases-final-project/blob/main/settings.py)
 
 
 ## Propagating Data Base Configurations and Runing the App
