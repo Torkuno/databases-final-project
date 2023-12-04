@@ -1,11 +1,41 @@
 import requests
 from bs4 import BeautifulSoup
-import json
+from pymongo import MongoClient
+import mysql.connector
 
-# URL of the website we wish to scrape
+
+# MongoDB connection details
+mongo_url = "mongodb://localhost:27017/"  # Replace with your MongoDB connection string
+db_name = "ProjectDB"  # Replace with your database name
+collection_name = "events"  # Replace with your collection name
+
+# Initialize MongoDB client
+client = MongoClient(mongo_url)
+db = client['ProjectDB']
+collection = db['events']
+
+
+
+# MySQL connection details
+mysql_host = "localhost"
+mysql_user = "root"
+mysql_password = "Miskinho_77"
+mysql_db = "projectdb"
+
+# Establishing a connection to the MySQL database
+conn = mysql.connector.connect(
+    host=mysql_host,
+    user=mysql_user,
+    password=mysql_password,
+    database=mysql_db
+)
+
+
+cursor = conn.cursor()
+# URL of the website you want to scrape
 url = 'https://www.fourvenues.com/en/discotecas-madrid/events?date=2023-12'
 
-# HTTP GET request to the website
+# Make an HTTP GET request to the website
 response = requests.get(url)
 
 # Initialize an empty list to store events
@@ -15,7 +45,7 @@ events = []
 if response.status_code == 200:
     # Parse the HTML content of the page
     soup = BeautifulSoup(response.content, 'html.parser')
-
+    
     # Extract event details
     for event_div in soup.find_all("div", class_="relative flex transition-all duration-300 hover:shadow-lg shadow-white cursor-pointer bg-gray-100 dark:bg-gray-800 hover:bg-white/70 hover:dark:bg-gray-700/70 rounded-lg overflow-hidden mt-3 cursor-pointer"):
         # Extracting event name, date, time, and location
@@ -34,8 +64,11 @@ if response.status_code == 200:
             start = style.find("url('") + 5
             end = style.find("')", start)
             image_url = style[start:end]
-
-        # Adding event details to the list
+        # Insert data into MySQL
+        query = "INSERT INTO events (name, date, start_time, end_time, location, image_url) VALUES (%s, %s, %s, %s, %s, %s)"
+        values = (event_name, event_date, event_time[:5], event_time[5:], event_location, image_url)
+        cursor.execute(query, values)
+        #Adding event details to the list
         events.append({
             "name": event_name,
             "date": event_date,
@@ -44,10 +77,18 @@ if response.status_code == 200:
             "location": event_location,
             "image": image_url
         })
-
-    # Save the events to a JSON file
-    with open('events.json', 'w') as file:
-        json.dump(events, file, indent=4)
+    conn.commit()
+    # Insert events into MongoDB
+    
+    if events:
+        collection.insert_many(events)
+        print("Events inserted into MongoDB")
+    else:
+        print("No events to insert")
+    
 
 else:
     print("Failed to retrieve the website")
+
+cursor.close()
+conn.close()

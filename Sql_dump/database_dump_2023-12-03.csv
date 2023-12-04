@@ -1,0 +1,470 @@
+Table: auth_group
+id,name
+--- End of Table: {table} ---
+Table: auth_group_permissions
+id,group_id,permission_id
+--- End of Table: {table} ---
+Table: auth_permission
+id,name,content_type_id,codename
+1,Can add events,1,add_events
+2,Can change events,1,change_events
+3,Can delete events,1,delete_events
+4,Can view events,1,view_events
+5,Can add log entry,2,add_logentry
+6,Can change log entry,2,change_logentry
+7,Can delete log entry,2,delete_logentry
+8,Can view log entry,2,view_logentry
+9,Can add permission,3,add_permission
+10,Can change permission,3,change_permission
+11,Can delete permission,3,delete_permission
+12,Can view permission,3,view_permission
+13,Can add group,4,add_group
+14,Can change group,4,change_group
+15,Can delete group,4,delete_group
+16,Can view group,4,view_group
+17,Can add user,5,add_user
+18,Can change user,5,change_user
+19,Can delete user,5,delete_user
+20,Can view user,5,view_user
+21,Can add content type,6,add_contenttype
+22,Can change content type,6,change_contenttype
+23,Can delete content type,6,delete_contenttype
+24,Can view content type,6,view_contenttype
+25,Can add session,7,add_session
+26,Can change session,7,change_session
+27,Can delete session,7,delete_session
+28,Can view session,7,view_session
+29,Can add mongo db model,8,add_mongodbmodel
+30,Can change mongo db model,8,change_mongodbmodel
+31,Can delete mongo db model,8,delete_mongodbmodel
+32,Can view mongo db model,8,view_mongodbmodel
+--- End of Table: {table} ---
+Table: auth_user
+id,password,last_login,is_superuser,username,first_name,last_name,email,is_staff,is_active,date_joined
+1,pbkdf2_sha256$600000$paZX98KU1N0gcDikOkHDaz$rzGc5c4DCgahF95mtiDPuFz00sare4fyMKSVzgz4ibg=,2023-12-04 12:10:20.494123,1,svrub,,,sverdugo.ieu2022@student.ie.edu,1,1,2023-12-04 12:09:38.045150
+--- End of Table: {table} ---
+Table: auth_user_groups
+id,user_id,group_id
+--- End of Table: {table} ---
+Table: auth_user_user_permissions
+id,user_id,permission_id
+--- End of Table: {table} ---
+Table: django_admin_log
+id,action_time,object_id,object_repr,action_flag,change_message,content_type_id,user_id
+--- End of Table: {table} ---
+Table: django_content_type
+id,app_label,model
+2,admin,logentry
+4,auth,group
+3,auth,permission
+5,auth,user
+6,contenttypes,contenttype
+1,madridevents,events
+8,madridevents,mongodbmodel
+7,sessions,session
+--- End of Table: {table} ---
+Table: django_migrations
+id,app,name,applied
+1,contenttypes,0001_initial,2023-12-04 12:07:35.963674
+2,auth,0001_initial,2023-12-04 12:07:36.248842
+3,admin,0001_initial,2023-12-04 12:07:36.355230
+4,admin,0002_logentry_remove_auto_add,2023-12-04 12:07:36.361742
+5,admin,0003_logentry_add_action_flag_choices,2023-12-04 12:07:36.368216
+6,contenttypes,0002_remove_content_type_name,2023-12-04 12:07:36.413128
+7,auth,0002_alter_permission_name_max_length,2023-12-04 12:07:36.447748
+8,auth,0003_alter_user_email_max_length,2023-12-04 12:07:36.465338
+9,auth,0004_alter_user_username_opts,2023-12-04 12:07:36.471267
+10,auth,0005_alter_user_last_login_null,2023-12-04 12:07:36.501566
+11,auth,0006_require_contenttypes_0002,2023-12-04 12:07:36.504879
+12,auth,0007_alter_validators_add_error_messages,2023-12-04 12:07:36.510769
+13,auth,0008_alter_user_username_max_length,2023-12-04 12:07:36.542220
+14,auth,0009_alter_user_last_name_max_length,2023-12-04 12:07:36.576767
+15,auth,0010_alter_group_name_max_length,2023-12-04 12:07:36.593006
+16,auth,0011_update_proxy_permissions,2023-12-04 12:07:36.601997
+17,auth,0012_alter_user_first_name_max_length,2023-12-04 12:07:36.635548
+18,madridevents,0001_initial,2023-12-04 12:07:36.649731
+19,sessions,0001_initial,2023-12-04 12:07:36.672606
+20,madridevents,0002_mongodbmodel,2023-12-04 14:31:07.583292
+21,madridevents,0002_delete_mongodbmodel,2023-12-04 19:59:23.479651
+--- End of Table: {table} ---
+Table: django_session
+session_key,session_data,expire_date
+q41l47z5zbnu96fwbf9h81usrjykkg1k,.eJxVjDsOgzAQBe_iOrJ2jT-QMj1nQGvvEkgiW8JQRbl7QKJI2jcz760G2tZp2Kosw8zqqlBdfrdI6Sn5APygfC86lbwuc9SHok9adV9YXrfT_TuYqE573Tn01pK3iYMYQQGDjlo2YwJk4NB4cC0jhwAdYTtCHCG46IVlTxr1-QLOzjfG:1rA7mG:O9qD5qdYXhjpCIczYeiPiSrgVRzdzujp_0rq9Wh-1CA,2023-12-18 12:10:20.497199
+--- End of Table: {table} ---
+Table: events
+id,name,date,start_time,end_time,location,image_url
+1,ROOTS,Mon 04 Dec,22:00,05:30,La Reserva,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+2,OH MY CLUB GOLD DIGGERS,Mon 04 Dec,00:00,05:30,Oh My Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+3,LUNES TEATRO BARCELO,Mon 04 Dec,00:00,06:00,Teatro Barceló,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+4,GET ADDICTED,Mon 04 Dec,00:00,05:30,OPIUM Madrid,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+5,AFTERWORK BONDED CLUB,Tue 05 Dec,20:00,00:00,BONDED CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+6,JUNGLA,Tue 05 Dec,22:00,05:30,La Reserva,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+7,MARVEL MADRID - ENTRADAS MARTES 5 DICIEMBRE,Tue 05 Dec,23:00,06:00,DISCOTECA MARVEL,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+8,HYPE MADRID! ESPECIAL PUENTE,Tue 05 Dec,23:30,06:00,EPOKA THE CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+9,SALA NAZCA MARTES 5 DICIEMBRE,Tue 05 Dec,23:45,06:00,Nazca Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+10,PUENTE DE DICIEMBRE x THE OMM,Tue 05 Dec,23:45,06:00,BLACKHAUS FRIDAYS,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+11,CATS Martes 5dic VISPERA CONSTITUCION,Tue 05 Dec,00:00,06:00,CATS MADRID,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+12,PURO POSH⭐️,Tue 05 Dec,00:00,06:00,Posh Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+13,MARTES TEATRO BARCELO,Tue 05 Dec,00:00,06:00,Teatro Barceló,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+14,MAU MAU - MARTES,Tue 05 Dec,00:00,06:00,MAU MAU Madrid,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+15,Martes Fitz,Tue 05 Dec,00:00,06:00,Fitz Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+16,OH MY CLUB LADIES NIGHT,Tue 05 Dec,00:00,05:30,Oh My Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+17,BONDED CLUB,Tue 05 Dec,00:00,05:30,BONDED CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+18,MARTES +18🐘,Tue 05 Dec,00:00,06:00,KUMARAH,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+19,MAD TUESDAYS GEN,Tue 05 Dec,00:00,07:30,OPIUM Madrid,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+20,CHANGO,Tue 05 Dec,00:00,06:00,Goose Group,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+21,KARAOKE PANDA SINGSTAR - VISPERA FESTIVO,Tue 05 Dec,00:00,06:00,Panda Singstar,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+22,PURO COPER,Tue 05 Dec,00:00,05:00,Copérnico The Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+23,PANDA VISPERA FESTIVO,Tue 05 Dec,00:00,06:00,PANDA CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+24,MARTES MON: COPAS A 2€ MOCOLOCO,Tue 05 Dec,00:00,06:00,Sala MON,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+25,TOXIC TUESDAY BY ARTIALNIGHTS,Tue 05 Dec,00:00,06:00,LIBERATA,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+26,Martes VANDIDO,Tue 05 Dec,00:00,06:00,VANDIDO,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+27,TENTACIÓN,Wed 06 Dec,22:00,05:30,La Reserva,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+28,ESENCIA ( ESPECIAL PUENTE),Wed 06 Dec,23:30,06:00,EPOKA THE CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+29,CATS Miercoles 6dic BARRA LIBRE COPAS,Wed 06 Dec,23:45,05:30,CATS MADRID,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+30,MIÉRCOLES,Wed 06 Dec,23:45,06:00,Nazca Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+31,TREMENDA LIADA,Wed 06 Dec,23:45,05:00,Copérnico The Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+32,Miercoles VANDIDO,Wed 06 Dec,00:00,06:00,VANDIDO,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+33,VERBENA,Wed 06 Dec,00:00,07:30,OPIUM Madrid,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+34,Miércoles Fitz,Wed 06 Dec,00:00,06:00,Fitz Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+35,MIÉRCOLES TEATRO BARCELO,Wed 06 Dec,00:00,05:30,Teatro Barceló,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+36,MIÉRCOLES MON: COPAS A 2€ MOCOLOCO,Wed 06 Dec,00:00,06:00,Sala MON,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+37,OH MY CLUB MENTIROSA,Wed 06 Dec,00:00,05:30,Oh My Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+38,101,Wed 06 Dec,00:00,05:30,VYTA CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+39,BUREO PONZANO,Thu 07 Dec,19:00,02:30,Yatengoplan,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+40,MENEO PONZANO,Thu 07 Dec,20:00,05:00,Yatengoplan,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+41,-TARDEO KARAOKE - PANDA SINGSTAR JUEVES,Thu 07 Dec,21:30,04:00,Panda Singstar,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+42,GOLDEN HOUR,Thu 07 Dec,22:00,05:30,La Reserva,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+43,EXCLUSIVE,Thu 07 Dec,23:30,06:00,La Sospechosa Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+44,FETÉN BY SLVJ,Thu 07 Dec,23:30,06:00,Feten by SLVJ,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+45,TABÚ,Thu 07 Dec,23:30,06:00,EPOKA THE CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+46,JUEVES - ICE,Thu 07 Dec,23:45,06:00,Nazca Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+47,CATS Jueves 7Dic BARRA LIBRE COPAS,Thu 07 Dec,23:45,05:30,CATS MADRID,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+48,MADEX x McDonald's 🍔       - GRATIS CON COPA,Thu 07 Dec,23:45,06:00,DISCOTECA MARVEL,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+49,TREMENDA LIADA,Thu 07 Dec,23:45,05:00,Copérnico The Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+50,JUEVES TEATRO BARCELO,Thu 07 Dec,00:00,05:30,Teatro Barceló,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+51,MAU MAU - THU.,Thu 07 Dec,00:00,06:00,MAU MAU Madrid,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+52,PANDA JUEVES VISPERA DE FESTIVO - BAMBOO,Thu 07 Dec,00:00,06:00,PANDA CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+53,QUEENS,Thu 07 Dec,00:00,05:30,OPIUM Madrid,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+54,POSH CLUB⭐️,Thu 07 Dec,00:00,06:00,Posh Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+55,Jueves Fitz presenta Lunay,Thu 07 Dec,00:00,06:00,Fitz Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+56,LA GUINDA,Thu 07 Dec,00:00,05:30,VYTA CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+57,JUEVES MON  METE TU BOTELLA,Thu 07 Dec,00:00,06:00,Sala MON,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+58,OH MY CLUB MONARCHIE,Thu 07 Dec,00:00,06:00,Oh My Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+59,"HATERS: B3B Klaudia Gawlas, Ramiro López y Spartaque",Thu 07 Dec,00:00,06:00,Sala La Riviera,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+60,DOS PASSOS,Fri 08 Dec,21:00,05:00,Yatengoplan,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+61,LA TRIBU,Fri 08 Dec,22:00,05:30,La Reserva,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+62,MARVEL MADRID - ENTRADAS VIERNES,Fri 08 Dec,23:30,06:00,DISCOTECA MARVEL,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+63,FETÉN BY SLVJ,Fri 08 Dec,23:30,06:00,Feten by SLVJ,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+64,TOM BRUSSE,Fri 08 Dec,23:30,06:00,La Sospechosa Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+65,BLACKHAUS FRIDAYS | APRÉS SKI,Fri 08 Dec,23:45,06:00,BLACKHAUS FRIDAYS,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+66,HYPE MADRID!,Fri 08 Dec,23:45,06:00,EPOKA THE CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+67,MONOCLE -  VIERNES (Havanna),Fri 08 Dec,23:45,06:00,Monocle Club Madrid,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+68,WE LOVE REGGAETON | ART,Fri 08 Dec,23:45,06:00,CASTIZO GROUP,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+69,VIERNES,Fri 08 Dec,23:45,06:00,Nazca Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+70,OH MY CLUB VIRAL,Fri 08 Dec,00:00,06:00,Oh My Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+71,Inauguración Stay Hard,Fri 08 Dec,00:00,06:00,Rococo,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+72,JOLGORIO,Fri 08 Dec,00:00,06:00,OPIUM Madrid,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+73,Fridays +21,Fri 08 Dec,00:00,06:00,LIBERATA,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+74,Viernes Fitz,Fri 08 Dec,00:00,06:00,Fitz Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+75,Voalá,Fri 08 Dec,00:00,06:00,Teatro Magno,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+76,VIERNES MON,Fri 08 Dec,00:00,06:00,Sala MON,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+77,PANDA VIERNES,Fri 08 Dec,00:00,06:00,PANDA CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+78,FIRE FRIDAY,Fri 08 Dec,00:00,06:00,BAO BAO,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+79,CHANGO,Fri 08 Dec,00:00,06:00,Goose Group,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+80,VIERNES TEATRO BARCELO,Fri 08 Dec,00:00,06:00,Teatro Barceló,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+81,Friday,Fri 08 Dec,00:00,06:00,Jowke Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+82,CATS Viernes 8dic,Fri 08 Dec,00:00,06:00,CATS MADRID,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+83,ADN,Fri 08 Dec,00:00,06:00,Zenith - Independance,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+84,PURO COPER,Fri 08 Dec,00:00,06:00,Copérnico The Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+85,VIERNES +18🐘,Fri 08 Dec,00:00,06:00,KUMARAH,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+86,FRIDAY | PURO POSH⭐️,Fri 08 Dec,00:00,06:00,Posh Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+87,PANDA SINGSTAR - LA TÓXICA,Fri 08 Dec,00:00,06:00,Panda Singstar,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+88,Opening Tiffany's + Dembow & Reggaeton🪩,Sat 09 Dec,17:00,22:00,Last Day,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+89,TARDEO BONDED,Sat 09 Dec,18:00,06:00,Yatengoplan,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+90,SAFARI,Sat 09 Dec,22:00,05:30,La Reserva,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+91,MARVEL MADRID - ENTRADAS SÁBADO,Sat 09 Dec,23:30,06:00,DISCOTECA MARVEL,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+92,SOSPECHOSA,Sat 09 Dec,23:30,06:00,La Sospechosa Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+93,FETÉN BY SLVJ,Sat 09 Dec,23:30,06:00,Feten by SLVJ,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+94,WE LOVE EPOKA,Sat 09 Dec,23:45,06:00,EPOKA THE CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+95,BLACKHAUS SATURDAYS | MALDAD,Sat 09 Dec,23:45,06:00,BLACKHAUS SATURDAY,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+96,SABADO,Sat 09 Dec,23:45,06:00,Nazca Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+97,MONOCLE -  SÁBADO (Supreme),Sat 09 Dec,23:45,06:00,Monocle Club Madrid,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+98,SÁBADO TEATRO BARCELO,Sat 09 Dec,00:00,06:00,Teatro Barceló,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+99,PERREOLAB & 511,Sat 09 Dec,00:00,06:00,Teatro Magno,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+100,SABADO MON,Sat 09 Dec,00:00,06:00,Sala MON,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+101,DOLCE VYTA,Sat 09 Dec,00:00,05:30,VYTA CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+102,LIBERATA SATURDAYS,Sat 09 Dec,00:00,06:00,LIBERATA,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+103,SATURDAY SUGAR | POSH CLUB ⭐️,Sat 09 Dec,00:00,06:00,Posh Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+104,Sábado Fitz presenta MOJAVE con Ángel Sánchez,Sat 09 Dec,00:00,06:00,Fitz Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+105,PURO COPER,Sat 09 Dec,00:00,06:00,Copérnico The Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+106,PANDA SABADO,Sat 09 Dec,00:00,06:00,PANDA CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+107,JUST OPIUM,Sat 09 Dec,00:00,07:30,OPIUM Madrid,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+108,TRAVIEXA X OH MY CLUB,Sat 09 Dec,00:00,06:00,Oh My Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+109,SILK NIGHT,Sat 09 Dec,00:00,06:00,BAO BAO,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+110,SPECIAL WE LOVE REGGAETON,Sat 09 Dec,00:00,06:00,LA RIVIERA,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+111,MAU MAU - SAT.,Sat 09 Dec,00:00,06:00,MAU MAU Madrid,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+112,SABADO +21🐘,Sat 09 Dec,00:00,06:00,KUMARAH,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+113,Saturday,Sat 09 Dec,00:00,06:00,Jowke Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+114,DEJAS (Vanity ),Sat 09 Dec,00:00,06:00,MYMO,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+115,CATS Sabado 9dic,Sat 09 Dec,00:15,06:00,CATS MADRID,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+116,NATIVO,Sun 10 Dec,22:00,05:30,La Reserva,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+117,DOMINGO,Sun 10 Dec,23:45,06:00,Nazca Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+118,MODELS NIGHT,Sun 10 Dec,00:00,05:30,VYTA CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+119,OH MY CLUB BLUEBELLS,Sun 10 Dec,00:00,05:30,Oh My Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+120,CAPRICCE!,Sun 10 Dec,00:00,05:30,OPIUM Madrid,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+121,ROOTS,Mon 11 Dec,22:00,05:30,La Reserva,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+122,LUNES TEATRO BARCELO,Mon 11 Dec,00:00,06:00,Teatro Barceló,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+123,GET ADDICTED,Mon 11 Dec,00:00,05:30,OPIUM Madrid,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+124,OH MY CLUB GOLD DIGGERS,Mon 11 Dec,00:00,05:30,Oh My Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+125,JUNGLA,Tue 12 Dec,22:00,05:30,La Reserva,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+126,OH MY CLUB LADIES NIGHT,Tue 12 Dec,00:00,05:30,Oh My Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+127,MAD TUESDAYS GEN,Tue 12 Dec,00:00,07:30,OPIUM Madrid,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+128,Martes Fitz,Tue 12 Dec,00:00,06:00,Fitz Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+129,TENTACIÓN,Wed 13 Dec,22:00,05:30,La Reserva,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+130,MIÉRCOLES,Wed 13 Dec,23:45,06:00,Nazca Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+131,VERBENA,Wed 13 Dec,00:00,07:30,OPIUM Madrid,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+132,MIÉRCOLES TEATRO BARCELO,Wed 13 Dec,00:00,05:30,Teatro Barceló,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+133,Miercoles VANDIDO,Wed 13 Dec,00:00,06:00,VANDIDO,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+134,101,Wed 13 Dec,00:00,05:30,VYTA CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+135,OH MY CLUB MENTIROSA,Wed 13 Dec,00:00,05:30,Oh My Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+136,GOLDEN HOUR,Thu 14 Dec,22:00,05:30,La Reserva,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+137,JUEVES - ICE,Thu 14 Dec,23:45,06:00,Nazca Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+138,EVENTO PRIVADO ACCENTURE,Thu 14 Dec,00:00,06:00,VYTA,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+139,808 CLVB,Thu 14 Dec,00:00,05:30,Zenith - Independance,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+140,JUEVES TEATRO BARCELO,Thu 14 Dec,00:00,05:30,Teatro Barceló,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+141,PANDA SingStar - JUEVES  KARAOKE,Thu 14 Dec,00:00,06:00,Panda Singstar,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+142,JUEVES MON  METE TU BOTELLA,Thu 14 Dec,00:00,06:00,Sala MON,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+143,TREMENDO MAMONEO,Thu 14 Dec,00:00,05:00,Copérnico The Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+144,QUEEN,Thu 14 Dec,00:00,05:30,OPIUM Madrid,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+145,OH MY CLUB MONARCHIE,Thu 14 Dec,00:00,06:00,Oh My Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+146,Thursday Chrystmas Random Nights,Thu 14 Dec,00:00,06:00,Jowke Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+147,Jueves Fitz,Thu 14 Dec,00:00,06:00,Fitz Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+148,PANDA JUEVES - BAMBOO,Thu 14 Dec,00:30,06:00,PANDA CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+149,BONDED CLUB,Thu 14 Dec,01:00,05:30,BONDED CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+150,LA TRIBU,Fri 15 Dec,22:00,05:30,La Reserva,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+151,MARVEL MADRID - ENTRADAS VIERNES,Fri 15 Dec,23:30,06:00,DISCOTECA MARVEL,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+152,MONOCLE -  VIERNES (Havanna),Fri 15 Dec,23:45,06:00,Monocle Club Madrid,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+153,VIERNES,Fri 15 Dec,23:45,06:00,Nazca Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+154,PRIVATE ROOM | ESIC GRADERS,Fri 15 Dec,23:45,06:00,BLACKHAUS FRIDAYS,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+155,FIRE FRIDAY,Fri 15 Dec,00:00,06:00,BAO BAO,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+156,GECKÖ SOCIETY,Fri 15 Dec,00:00,06:00,BONDED CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+157,VIERNES MON,Fri 15 Dec,00:00,06:00,Sala MON,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+158,Teatro Magno,Fri 15 Dec,00:00,06:00,Teatro Magno,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+159,REGGAETON WEEKEND,Fri 15 Dec,00:00,06:00,EPOKA THE CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+160,BERENATTA - STEPHAN BODZIN live!,Fri 15 Dec,00:00,06:00,LAB theCLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+161,Viernes Fitz,Fri 15 Dec,00:00,06:00,Fitz Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+162,VIERNES TEATRO BARCELO,Fri 15 Dec,00:00,06:00,Teatro Barceló,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+163,VIERNES PANDA SINGSTAR,Fri 15 Dec,00:00,06:00,Panda Singstar,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+164,PURO COPER,Fri 15 Dec,00:00,06:00,Copérnico The Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+165,CHANGO,Fri 15 Dec,00:00,06:00,Goose Group,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+166,FRIDAY | PURO POSH⭐️,Fri 15 Dec,00:00,06:00,Posh Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+167,OH MY CLUB VIRAL,Fri 15 Dec,00:00,06:00,Oh My Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+168,CLIQUOT,Fri 15 Dec,00:00,06:00,the bassement,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+169,Friday,Fri 15 Dec,00:00,06:00,Jowke Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+170,JOLGORIO,Fri 15 Dec,00:00,06:00,OPIUM Madrid,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+171,PANDA VIERNES,Fri 15 Dec,01:00,06:00,PANDA CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+172,LA BUENA ÉPOCA🐘//Sesión de tarde,Sat 16 Dec,17:00,23:00,KUMARAH,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+173,"Aquellos Años Locos ""La Trilogía de Navidad"" Vol.1",Sat 16 Dec,18:00,23:30,Teatro Barceló,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+174,SAFARI,Sat 16 Dec,22:00,05:30,La Reserva,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+175,MARVEL MADRID - ENTRADAS SÁBADO,Sat 16 Dec,23:30,06:00,DISCOTECA MARVEL,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+176,SABADO,Sat 16 Dec,23:45,06:00,Nazca Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+177,Nox Club Madrid ft. CHELINA MANUHUTU,Sat 16 Dec,23:45,06:00,Nox Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+178,BLACKHAUS SATURDAYS,Sat 16 Dec,23:45,06:00,BLACKHAUS SATURDAY,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+179,MONOCLE -  SÁBADO (Supreme),Sat 16 Dec,23:45,06:00,Monocle Club Madrid,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+180,DOLCE VYTA,Sat 16 Dec,00:00,05:30,VYTA CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+181,SÁBADO TEATRO BARCELO,Sat 16 Dec,00:00,06:00,Teatro Barceló,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+182,PURO COPER,Sat 16 Dec,00:00,06:00,Copérnico The Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+183,TRAVIEXA X OH MY CLUB,Sat 16 Dec,00:00,06:00,Oh My Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+184,BONDED CLUB,Sat 16 Dec,00:00,07:30,BONDED CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+185,Sábado Fitz,Sat 16 Dec,00:00,06:00,Fitz Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+186,SABADO MON,Sat 16 Dec,00:00,06:00,Sala MON,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+187,Saturday,Sat 16 Dec,00:00,06:00,Jowke Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+188,SABADO 16 DE DICIEMBRE,Sat 16 Dec,00:00,06:00,BAO BAO,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+189,PERREOLAB & 511,Sat 16 Dec,00:00,06:00,Teatro Magno,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+190,Michenlo @ La Riviera / Gamergy,Sat 16 Dec,00:00,06:00,Sala La Riviera,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+191,SATURDAY SUGAR | POSH CLUB ⭐️,Sat 16 Dec,00:00,06:00,Posh Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+192,JUST OPIUM,Sat 16 Dec,00:00,07:30,OPIUM Madrid,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+193,HYPE MADRID!,Sat 16 Dec,00:00,06:00,EPOKA THE CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+194,PANDA SABADO,Sat 16 Dec,00:00,06:00,PANDA CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+195,NATIVO,Sun 17 Dec,22:00,05:30,La Reserva,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+196,DOMINGO,Sun 17 Dec,23:45,06:00,Nazca Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+197,After Party Gamergy | Posh⭐️,Sun 17 Dec,00:00,06:00,Posh Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+198,MODELS NIGHT,Sun 17 Dec,00:00,05:30,VYTA CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+199,OH MY CLUB BLUEBELLS,Sun 17 Dec,00:00,05:30,Oh My Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+200,CAPRICCE!,Sun 17 Dec,00:00,05:30,OPIUM Madrid,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+201,ROOTS,Mon 18 Dec,22:00,05:30,La Reserva,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+202,LUNES TEATRO BARCELO,Mon 18 Dec,00:00,06:00,Teatro Barceló,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+203,GET ADDICTED,Mon 18 Dec,00:00,05:30,OPIUM Madrid,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+204,OH MY CLUB GOLD DIGGERS,Mon 18 Dec,00:00,05:30,Oh My Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+205,JUNGLA,Tue 19 Dec,22:00,05:30,La Reserva,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+206,MAD TUESDAYS GEN,Tue 19 Dec,00:00,07:30,OPIUM Madrid,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+207,OH MY CLUB LADIES NIGHT,Tue 19 Dec,00:00,05:30,Oh My Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+208,TENTACIÓN,Wed 20 Dec,22:00,05:30,La Reserva,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+209,MIÉRCOLES,Wed 20 Dec,23:45,06:00,Nazca Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+210,MIÉRCOLES TEATRO BARCELO,Wed 20 Dec,00:00,05:30,Teatro Barceló,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+211,Miercoles VANDIDO,Wed 20 Dec,00:00,06:00,VANDIDO,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+212,VERBENA,Wed 20 Dec,00:00,07:30,OPIUM Madrid,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+213,101,Wed 20 Dec,00:00,05:30,VYTA CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+214,OH MY CLUB MENTIROSA,Wed 20 Dec,00:00,05:30,Oh My Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+215,FIN DE EXÁMENES,Wed 20 Dec,00:00,05:00,Copérnico The Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+216,MAYBE - FIN EXAMENES,Wed 20 Dec,00:00,05:30,the bassement,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+217,AFTERWORK BONDED CLUB,Thu 21 Dec,20:00,00:00,BONDED CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+218,GOLDEN HOUR,Thu 21 Dec,22:00,05:30,La Reserva,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+219,AFTERWORK BONDED CLUB,Thu 21 Dec,22:00,00:00,BONDED CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+220,JUEVES - ICE,Thu 21 Dec,23:45,06:00,Nazca Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+221,LIBERATA | OASIS x FIN DE EXAMENES,Thu 21 Dec,23:45,06:00,LIBERATA,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+222,BLACKHAUS THURSDAYS | SORRYMOM,Thu 21 Dec,23:45,06:00,BLACKHAUS FRIDAYS,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+223,Esencia Chritsmas (Fin de Exámenes),Thu 21 Dec,23:45,06:00,EPOKA THE CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+224,LA GUINDA,Thu 21 Dec,00:00,05:30,VYTA CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+225,OH MY CLUB MONARCHIE,Thu 21 Dec,00:00,06:00,Oh My Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+226,FIN DE EXAMENES | POSH⭐️,Thu 21 Dec,00:00,06:00,Posh Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+227,PANDA SingStar - JUEVES,Thu 21 Dec,00:00,06:00,Panda Singstar,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+228,JUEVES TEATRO BARCELO,Thu 21 Dec,00:00,05:30,Teatro Barceló,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+229,Jueves Fitz,Thu 21 Dec,00:00,06:00,Fitz Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+230,Thursday Chrystmas Random Nights,Thu 21 Dec,00:00,06:00,Jowke Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+231,FIN DE EXÁMENES,Thu 21 Dec,00:00,05:00,Copérnico The Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+232,PANDA JUEVES - BAMBOO,Thu 21 Dec,00:00,06:00,PANDA CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+233,QUEEN,Thu 21 Dec,00:00,05:30,OPIUM Madrid,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+234,MAYBE - FIN EXAMENES,Thu 21 Dec,00:00,05:30,the bassement,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+235,Roxy Fin de Exámenes by Gossip,Thu 21 Dec,00:00,05:30,The Roxy Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+236,LA TRIBU,Fri 22 Dec,22:00,05:30,La Reserva,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+237,MARVEL MADRID - ENTRADAS VIERNES,Fri 22 Dec,23:30,06:00,DISCOTECA MARVEL,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+238,WE LOVE REGGAETON | ART | FIN DE EXÁMENES,Fri 22 Dec,23:45,06:00,CASTIZO GROUP,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+239,REGGAETON WEEKEND,Fri 22 Dec,23:45,06:00,EPOKA THE CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+240,MONOCLE -  VIERNES (Havanna),Fri 22 Dec,23:45,06:00,Monocle Club Madrid,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+241,BLACKHAUS FRIDAYS | FIN DE EXÁMENES,Fri 22 Dec,23:45,06:00,BLACKHAUS FRIDAYS,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+242,VIERNES,Fri 22 Dec,23:45,06:00,Nazca Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+243,Viernes Fitz,Fri 22 Dec,00:00,06:00,Fitz Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+244,VIERNES PANDA SINGSTAR,Fri 22 Dec,00:00,06:00,Panda Singstar,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+245,VIERNES MON,Fri 22 Dec,00:00,06:00,Sala MON,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+246,FIN EXÁMENES COMILLAS | PURO POSH⭐️,Fri 22 Dec,00:00,06:00,Posh Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+247,GECKÖ SOCIETY,Fri 22 Dec,00:00,06:00,BONDED CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+248,OH MY CLUB VIRAL,Fri 22 Dec,00:00,06:00,Oh My Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+249,JOLGORIO,Fri 22 Dec,00:00,06:00,OPIUM Madrid,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+250,VIERNES TEATRO BARCELO,Fri 22 Dec,00:00,06:00,Teatro Barceló,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+251,Friday,Fri 22 Dec,00:00,06:00,Jowke Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+252,PURO COPER,Fri 22 Dec,00:00,06:00,Copérnico The Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+253,PANDA VIERNES,Fri 22 Dec,00:00,06:00,PANDA CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+254,La Movida de los 90' - 3ª Planta (El Cielo),Sat 23 Dec,18:00,23:30,Teatro Barceló,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+255,"Aquellos Años Locos ""La Trilogía de Navidad"" Vol.2",Sat 23 Dec,18:00,23:30,Teatro Barceló,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+256,SAFARI,Sat 23 Dec,22:00,05:30,La Reserva,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+257,CHRISTMAS FEST,Sat 23 Dec,23:00,06:00,EPOKA THE CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+258,MARVEL MADRID - ENTRADAS SÁBADO,Sat 23 Dec,23:30,06:00,DISCOTECA MARVEL,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+259,MONOCLE -  SÁBADO (Supreme),Sat 23 Dec,23:45,06:00,Monocle Club Madrid,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+260,SABADO,Sat 23 Dec,23:45,06:00,Nazca Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+261,BLACKHAUS SATURDAYS,Sat 23 Dec,23:45,06:00,BLACKHAUS SATURDAY,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+262,DOLCE VYTA,Sat 23 Dec,00:00,05:30,VYTA CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+263,PANDA SABADO,Sat 23 Dec,00:00,06:00,PANDA CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+264,Sábado Fitz,Sat 23 Dec,00:00,06:00,Fitz Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+265,PERREOLAB & 511,Sat 23 Dec,00:00,06:00,Teatro Magno,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+266,DEJAS (Vanity ),Sat 23 Dec,00:00,06:00,MYMO,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+267,SÁBADO TEATRO BARCELO,Sat 23 Dec,00:00,06:00,Teatro Barceló,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+268,PURO COPER,Sat 23 Dec,00:00,06:00,Copérnico The Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+269,TRAVIEXA X OH MY CLUB,Sat 23 Dec,00:00,06:00,Oh My Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+270,SABADO MON,Sat 23 Dec,00:00,06:00,Sala MON,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+271,SATURDAY SUGAR |  POSH CLUB ⭐️,Sat 23 Dec,00:00,06:00,Posh Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+272,JUST OPIUM,Sat 23 Dec,00:00,07:30,OPIUM Madrid,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+273,Saturday,Sat 23 Dec,00:00,06:00,Jowke Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+274,NATIVO,Sun 24 Dec,22:00,05:30,La Reserva,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+275,DOMINGO,Sun 24 Dec,23:45,06:00,Nazca Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+276,Nochebuena,Sun 24 Dec,00:00,06:00,Copérnico The Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+277,NOCHEBUENA,Sun 24 Dec,00:00,07:30,Jowke Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+278,NOCHE BUENA VYTA,Sun 24 Dec,00:00,05:30,VYTA CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+279,NOCHEBUENA CALIENTE,Sun 24 Dec,00:00,06:00,MAU MAU Madrid,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+280,NOCHEBUENA🎄🎅🏼🐘,Sun 24 Dec,00:00,06:00,KUMARAH,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+281,OH MY CLUB BLUEBELLS,Sun 24 Dec,00:00,05:30,Oh My Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+282,PANDA - NOCHEBUENA,Sun 24 Dec,00:00,06:00,PANDA CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+283,SABADO MON,Sun 24 Dec,00:00,06:00,Sala MON,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+284,NOCHEBUENA ALVAMA ICE AUTOCINE,Sun 24 Dec,00:00,06:00,Autocine V Y S,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+285,NOCHEBUENA🎄| POSH CLUB,Sun 24 Dec,00:00,06:00,Posh Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+286,XMAS EVE,Sun 24 Dec,00:00,05:30,OPIUM Madrid,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+287,XMAS NIGHT by BOBS,Sun 24 Dec,00:00,06:00,BONDED CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+288,ROOTS,Mon 25 Dec,22:00,05:30,La Reserva,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+289,TREMENDA LIADA,Mon 25 Dec,23:45,05:00,Copérnico The Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+290,NAVIDAD TEATRO BARCELO,Mon 25 Dec,00:00,06:00,Teatro Barceló,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+291,MERRY XMAS,Mon 25 Dec,00:00,05:30,OPIUM Madrid,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+292,OH MY CLUB GOLD DIGGERS,Mon 25 Dec,00:00,05:30,Oh My Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+293,JUNGLA,Tue 26 Dec,22:00,05:30,La Reserva,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+294,TREMENDA LIADA,Tue 26 Dec,23:45,05:00,Copérnico The Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+295,MAD TUESDAYS GEN,Tue 26 Dec,00:00,07:30,OPIUM Madrid,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+296,OH MY CLUB LADIES NIGHT,Tue 26 Dec,00:00,05:30,Oh My Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+297,Martes Fitz,Tue 26 Dec,00:00,06:00,Fitz Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+298,TENTACIÓN,Wed 27 Dec,22:00,05:30,La Reserva,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+299,TREMENDA LIADA,Wed 27 Dec,23:45,05:00,Copérnico The Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+300,MIÉRCOLES,Wed 27 Dec,23:45,06:00,Nazca Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+301,101,Wed 27 Dec,00:00,05:30,VYTA CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+302,Miercoles VANDIDO,Wed 27 Dec,00:00,06:00,VANDIDO,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+303,MIÉRCOLES TEATRO BARCELO,Wed 27 Dec,00:00,05:30,Teatro Barceló,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+304,VERBENA,Wed 27 Dec,00:00,07:30,OPIUM Madrid,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+305,OH MY CLUB MENTIROSA,Wed 27 Dec,00:00,05:30,Oh My Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+306,GOLDEN HOUR,Thu 28 Dec,22:00,05:30,La Reserva,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+307,JUEVES - ICE,Thu 28 Dec,23:45,06:00,Nazca Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+308,TREMENDA LIADA,Thu 28 Dec,23:45,05:00,Copérnico The Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+309,Thursday Chrystmas Random Nights,Thu 28 Dec,00:00,06:00,Jowke Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+310,PANDA SingStar - JUEVES,Thu 28 Dec,00:00,06:00,Panda Singstar,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+311,JUEVES MON METE TU BOTELLA,Thu 28 Dec,00:00,06:00,Sala MON,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+312,JUEVES TEATRO BARCELO,Thu 28 Dec,00:00,05:30,Teatro Barceló,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+313,LA GUINDA,Thu 28 Dec,00:00,05:30,VYTA CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+314,OH MY CLUB MONARCHIE,Thu 28 Dec,00:00,06:00,Oh My Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+315,Jueves Fitz,Thu 28 Dec,00:00,06:00,Fitz Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+316,PANDA JUEVES - BAMBOO,Thu 28 Dec,00:00,06:00,PANDA CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+317,La noche del Templo,Thu 28 Dec,00:00,06:00,Posh Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+318,QUEEN,Thu 28 Dec,00:00,05:30,OPIUM Madrid,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+319,LA TRIBU,Fri 29 Dec,22:00,05:30,La Reserva,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+320,MARVEL MADRID - ENTRADAS VIERNES,Fri 29 Dec,23:30,06:00,DISCOTECA MARVEL,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+321,VIERNES,Fri 29 Dec,23:45,06:00,Nazca Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+322,REGGAETON WEEKEND,Fri 29 Dec,23:45,06:00,EPOKA THE CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+323,MONOCLE -  VIERNES (Havanna),Fri 29 Dec,23:45,06:00,Monocle Club Madrid,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+324,JOLGORIO,Fri 29 Dec,00:00,06:00,OPIUM Madrid,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+325,VIERNES PANDA SINGSTAR,Fri 29 Dec,00:00,06:00,Panda Singstar,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+326,VIERNES MON,Fri 29 Dec,00:00,06:00,Sala MON,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+327,Viernes Fitz,Fri 29 Dec,00:00,06:00,Fitz Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+328,Friday,Fri 29 Dec,00:00,06:00,Jowke Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+329,PANDA VIERNES,Fri 29 Dec,00:00,06:00,PANDA CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+330,OH MY CLUB VIRAL,Fri 29 Dec,00:00,06:00,Oh My Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+331,FRIDAY | PURO POSH⭐️,Fri 29 Dec,00:00,06:00,Posh Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+332,PURO COPER,Fri 29 Dec,00:00,06:00,Copérnico The Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+333,VIERNES TEATRO BARCELO,Fri 29 Dec,00:00,06:00,Teatro Barceló,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+334,"PetaZeta Pop ""La Trilogía de Navidad"" Vol.3",Sat 30 Dec,18:00,23:30,Teatro Barceló,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+335,SAFARI,Sat 30 Dec,22:00,05:30,La Reserva,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+336,MARVEL MADRID - ENTRADAS SÁBADO,Sat 30 Dec,23:30,06:00,DISCOTECA MARVEL,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+337,ESENCIA,Sat 30 Dec,23:45,06:00,EPOKA THE CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+338,SABADO,Sat 30 Dec,23:45,06:00,Nazca Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+339,MONOCLE -  SÁBADO (Supreme),Sat 30 Dec,23:45,06:00,Monocle Club Madrid,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+340,SÁBADO TEATRO BARCELO,Sat 30 Dec,00:00,06:00,Teatro Barceló,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+341,JUST OPIUM,Sat 30 Dec,00:00,07:30,OPIUM Madrid,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+342,Saturday,Sat 30 Dec,00:00,06:00,Jowke Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+343,TRAVIEXA X OH MY CLUB,Sat 30 Dec,00:00,06:00,Oh My Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+344,PANDA SABADO,Sat 30 Dec,00:00,06:00,PANDA CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+345,VIERNES PANDA SINGSTAR,Sat 30 Dec,00:00,06:00,Panda Singstar,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+346,DOLCE VYTA,Sat 30 Dec,00:00,05:30,VYTA CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+347,SATURDAY SUGAR |  POSH CLUB ⭐️,Sat 30 Dec,00:00,06:00,Posh Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+348,SABADO MON,Sat 30 Dec,00:00,06:00,Sala MON,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+349,PERREOLAB & 511,Sat 30 Dec,00:00,06:00,Teatro Magno,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+350,Sábado Fitz,Sat 30 Dec,00:00,06:00,Fitz Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+351,PURO COPER,Sat 30 Dec,00:00,06:00,Copérnico The Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+352,PERREOLAB X 511 | NEW YEARS PARTY,Sun 31 Dec,00:00,07:30,Teatro Magno,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+353,PADANA NOCHEVIEJA EDITION,Sun 31 Dec,00:00,06:00,CASTIZO GROUP,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+354,FIN DE AÑO RESERVADOS SALA NAZCA DOMINGO 31 DICIEMBRE,Sun 31 Dec,00:00,06:00,Nazca Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+355,MONOCLE - NOCHEVIEJA (Havanna),Sun 31 Dec,00:00,07:00,Monocle Club Madrid,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+356,NOCHEVIEJA BLACKHAUS,Sun 31 Dec,00:00,06:30,BLACKHAUS FRIDAYS,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+357,BRESH NOCHEVIEJA,Sun 31 Dec,00:00,06:00,BRESH NOCHEVIEJA,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+358,NOCHEVIEJA | LIBERATA,Sun 31 Dec,00:00,06:00,LIBERATA,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+359,NEW YEAR at FITZ CLUB,Sun 31 Dec,00:00,06:00,Fitz Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+360,THE BASSEMENT | FIN DE AÑO (hasta las 8.00),Sun 31 Dec,00:00,08:00,FIN DE AÑO - TB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+361,NOCHEVIEJA BLACKHAUS,Sun 31 Dec,00:00,06:30,BLACKHAUS SATURDAY,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+362,NOCHEVIEJA 2023,Sun 31 Dec,00:00,07:00,EPOKA THE CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+363,NOCHEVIEJA,Sun 31 Dec,00:00,06:00,MYMO,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+364,SALAS WHITE Y BLACK - ENTRADAS FIN DE AÑO DOMINGO 31 DICIEMBRE,Sun 31 Dec,00:00,06:00,Nazca Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+365,NOCHEVIEJA 2024 - MON MADRID,Sun 31 Dec,00:00,07:30,Sala MON,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+366,ROCOCO NYE 2024 | THE LAST DANCE 🎇,Sun 31 Dec,00:00,06:00,Posh Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+367,NOCHEVIEJA OH MY CLUB,Sun 31 Dec,00:00,07:30,Oh My Club,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+368,Nochevieja en Zielou,Sun 31 Dec,00:30,06:00,Zielou,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+369,NOCHEVIEJA YATENGOPLAN,Sun 31 Dec,00:30,08:00,Yatengoplan,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+370,GRACE SUNDAYS NYE,Sun 31 Dec,00:30,07:00,Feten by SLVJ,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+371,NOCHE VIEJA VYTA,Sun 31 Dec,00:30,05:30,VYTA CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+372,NEW YEARS´S EVE,Sun 31 Dec,00:30,06:00,OPIUM Madrid,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+373,NOCHEVIEJA CATS DOMINGO 31dic,Sun 31 Dec,00:45,07:00,CATS MADRID,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+374,NOCHEVIEJA - PANDA,Sun 31 Dec,00:45,06:00,PANDA CLUB,https://d72sklgi05fbu.cloudfront.net/images/venues/logo/Plcyu9o2c0019018n4x16dm0nW0UDfr4.png?versionId=Ll.Q79qG9whZwEoZh9ypw6vvdV33BoSt
+--- End of Table: {table} ---

@@ -1,25 +1,3 @@
-<!--------------------- Table of Contents ------------------->
-## Table Of Contents
-- [1. Django configurations](#1.-Django-configurations)
-    - [Setting up our Django Web-App](#Setting-up-our-Django-Web-App)
-    - [Configure Database Settings for the Django Web-App](#Configure-Database-Settings-for-the-Django-Web-App)
-        - [Configure Database Settings for MySQL database](#Configure-Database-Settings-for-MySQL-database)
-    - [Propagating Data Base Configurations and Runing the App](#Propagating-Data-Base-Configurations-and-Runing-the-App)
-- [2. Web-Scraping](#2.-Web-Scraping)
-    - [Prerequisites](#Prerequisites)
-    - [Explanation of scraping.py](#scraping-file)
-        - [Setting the target url](#Setting-the-target-url)
-        - [Making a request to the website](#Making-a-request-to-the-website)
-        - [Initializing an Empty List for Events](#Initializing-an-Empty-List-for-Events)
-        - [Checking the Request Status](#Checking-the-Request-Status)
-        - [Parsing HTML Content with BeautifulSoup](#Parsing-HTML-Content-with-BeautifulSoup)
-        - [Extracting Event Details](#Extracting-Event-Details)
-        - [Extracting Event Information](#Extracting-Event-Information)
-        - [Fidning the image](#Fidning-the-image)
-        - [Adding Event Details to the List](#Adding-Event-Details-to-the-List)
-        - [Saving Events to a JSON File](#Saving-Events-to-a-JSON-File)
-        - [Request Failure](#Request-Failure)
-- [3. Project Members](#3.-Project-Members)
 
 
 <!--------------------- Django Web-App  --------------------->
@@ -31,7 +9,7 @@ pip install virtualenv
 virtualenv venv
 venv\Scripts\activate
 ```
-configuring **virtual environment** to hoset our Django Web-App.
+Configuring **virtual environment** to host our Django Web-App.
 ```
 pip install wheel
 pip install django
@@ -45,7 +23,7 @@ django-admin startproject madridevents
 ## Configure Database Settings for the Django Web-App
 We decided to do the MySQL and Django migrations in separate Python files (MySQL in manage.py and MongoDB in manage_Mongo.py) this was done in order for us to integrate the MySQL Database seamlessly with Django's ORM(Object-Relational Mapping) and have more flexibility with the management and configuration of the MongoDB Database.
 
-### Configure Database Settings for MySQL database 
+### Configure Database Settings for MySQL database
 
 [settings.py](https://github.com/Torkuno/databases-final-project/blob/main/settings.py)
 
@@ -67,10 +45,8 @@ python manage.py runserver
 ```
 
 
-
-
-<!-------------------- WEB-Scraping ------------------------->
-# 2. Web-Scraping
+<!-------------------- WEB Scraping ------------------------->
+# 2. Web Scraping
 ## Prerequisites
 This project's execution requres **BeautifulSoup4** and **requests**. You can install them using
 ```
@@ -167,8 +143,47 @@ else:
     print("Failed to retrieve the website")
 ```
 
+# 3. SQL_Dump implementation
+This package contains two Python scripts: `SQL_Dump.py` and `Change_detector.py`. Each script serves a unique purpose in managing and analyzing SQL database dumps.
+## SQL_Dump
+### Purpose
+This script is designed to create a dump of an SQL database into a single file.
 
-# 3. Project Members
+### Functionality
+- Establishes a connection to a specified MySQL database using provided credentials (host, user, password, and database name).
+- Retrieves a list of all tables within the database.
+- Dumps the content of each table into a CSV file format.
+- Saves the output in a specified directory, timestamping the file for easy identification.
+
+### Usage
+- Ensure MySQL connector for Python is installed.
+- Provide database credentials and output directory as arguments to the main function.
+## Changes detection
+
+**Purpose**: This script is used to detect changes between two SQL database dumps.
+
+**Functionality**:
+- Identifies the two most recent database dump files in a given directory, assuming filenames start with 'database_dump_' and have a date format.
+- Reads the CSV files, handling any potential file reading errors.
+- Compares the data in these files to detect any changes.
+
+**Usage**:
+- Place this script in the same directory as your SQL dump files or specify the directory path.
+- Ensure pandas and other dependencies are installed.
+- Run the script to analyze changes between the latest two dumps.
+
+## Dependencies:
+- `mysql.connector`: Required for `SQL_Dump.py` to connect to MySQL databases.
+- `pandas`: Used in `Change_detector.py` for data handling and comparison.
+
+## Installation:
+- Install the required Python packages using `pip install mysql-connector-python pandas`.
+
+**Note**: Customize the scripts as per your database and directory structure for optimal use. Always ensure your database credentials are securely handled.
+
+
+<!-------------------- PROJECT MEMBERS ------------------------->
+# 4. Project Members
 All the collabroaors in this repositories are group members.
 
 - [Shahaf Brenner](https://github.com/shahafbr)

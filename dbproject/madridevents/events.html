@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Madrid Events</title>
+    <!-- Add any additional CSS or JS here -->
+</head>
+<body>
+    <h1>Madrid Events</h1>
+    
+    <!-- Form for data insertion -->
+    <form method="post">
+        {% csrf_token %}
+        <!-- Assuming you have a Django form for your model -->
+        {{ form.as_p }}
+        <input type="submit" value="Submit">
+    </form>
+
+    <!-- Filter Form -->
+    <form method="get" action="{% url 'events_filter' %}">
+        <input type="date" name="filter_date">
+        <input type="text" name="filter_location" placeholder="Location">
+        <input type="submit" value="Filter">
+    </form>
+
+    <!-- Display Events -->
+    <div id="events-list">
+        {% for event in events %}
+        <div class="event">
+            <h2>{{ event.name }}</h2>
+            <p>Date: {{ event.date }}</p>
+            <p>Start Time: {{ event.start_time }}</p>
+            <p>End Time: {{ event.end_time }}</p>
+            <!-- Add other event details -->
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
