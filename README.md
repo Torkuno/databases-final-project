@@ -182,8 +182,31 @@ This script is designed to create a dump of an SQL database into a single file.
 **Note**: Customize the scripts as per your database and directory structure for optimal use. Always ensure your database credentials are securely handled.
 
 
+# 4. Populating MySQL and MongoDB
+
+### Configurations
+The `scraping.py` file also contains the details needed to connect to MySQL and MongoDB in order to populate the databases.
+```
+mongo_url = "mongodb://localhost:27017/"
+db_name = "ProjectDB"
+collection_name = "events"
+
+mysql_host = "localhost"
+mysql_user = "root"
+mysql_password = "personal_unique_password"
+mysql_db = "projectdb"
+```
+
+### Running
+After having all the files, you can run the following command to commence the web scraping process and subsequently populate the MySQL and MongoDB databases.
+```
+python manage.py runserver
+```
+
+
+
 <!-------------------- PROJECT MEMBERS ------------------------->
-# 4. Project Members
+# 5. Project Members
 All the collabroaors in this repositories are group members.
 
 - [Shahaf Brenner](https://github.com/shahafbr)

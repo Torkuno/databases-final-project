@@ -19,7 +19,7 @@ collection = db['events']
 # MySQL connection details
 mysql_host = "localhost"
 mysql_user = "root"
-mysql_password = "Miskinho_77"
+mysql_password = "Miskinho_77"  # Replace with personal MySQL password
 mysql_db = "projectdb"
 
 # Establishing a connection to the MySQL database
@@ -45,7 +45,7 @@ events = []
 if response.status_code == 200:
     # Parse the HTML content of the page
     soup = BeautifulSoup(response.content, 'html.parser')
-    
+
     # Extract event details
     for event_div in soup.find_all("div", class_="relative flex transition-all duration-300 hover:shadow-lg shadow-white cursor-pointer bg-gray-100 dark:bg-gray-800 hover:bg-white/70 hover:dark:bg-gray-700/70 rounded-lg overflow-hidden mt-3 cursor-pointer"):
         # Extracting event name, date, time, and location
@@ -79,13 +79,13 @@ if response.status_code == 200:
         })
     conn.commit()
     # Insert events into MongoDB
-    
+
     if events:
         collection.insert_many(events)
         print("Events inserted into MongoDB")
     else:
         print("No events to insert")
-    
+
 
 else:
     print("Failed to retrieve the website")
